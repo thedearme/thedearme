@@ -154,10 +154,7 @@ echo " ===========================\n";
         $expired6 = getStr1('"expiry_date":"','"',$cekvoucher,'6');
         $expired7 = getStr1('"expiry_date":"','"',$cekvoucher,'7');
         setpin:
-         echo "\n".color("nevy","?] SET PIN SISAN ?: y/n ");
-         $pilih1 = trim(fgets(STDIN));
-         if($pilih1 == "y" || $pilih1 == "Y"){
-         //if($pilih1 == "y" && strpos($no, "628")){
+        
          echo color("red","========( PIN MU = 190396 )========")."\n";
          $data2 = '{"pin":"190396"}';
          $getotpsetpin = request("/wallet/pin", $token, $data2, null, null, $uuid);
