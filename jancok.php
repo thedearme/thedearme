@@ -1,13 +1,13 @@
 <?php
 date_default_timezone_set('Asia/Jakarta');
 include "function.php";
-echo color("red"," ===========================\n");
-echo color("red","| Claim Voucher Gojek|\n");
-echo color("red","| Auto create Gojek X Redeem voucher |\n");
-echo color("red","| github: thedearme |\n");
+echo color("red"," ===NOT SAFE FOR WORK IF 02===\n");
+echo color("blue","| Claim Voucher Gojek|\n");
+echo color("yellow","| Auto create Gojek X Redeem voucher |\n");
+echo color("green","| github: thedearme |\n");
 echo color("red","| fanspage :gofoodseindonesia|\n");
-echo color("red","| Creator : A.G          |\n");
-echo "| Version : Premium X pertalite      |\n";
+echo color("blue","| Creator : A.G /Info Lanjut Kontak Tele @Ameteraasu          |\n");
+echo "| Version :Tanpa Set Pin Ya !      |\n";
 echo "| Time    :".date('[d-m-Y] [H:i:s]')."   |\n";
 echo " ===========================\n";
 
@@ -15,7 +15,7 @@ echo " ===========================\n";
         $nama = nama();
         $email = str_replace(" ", "", $nama) . mt_rand(100, 999);
         ulang:
-        echo color("nevy","?] Nomor : ");
+        echo color("red","?] Nomor : ");
         // $no = trim(fgets(STDIN));
         $nohp = trim(fgets(STDIN));
         $nohp = str_replace("62","62",$nohp);
