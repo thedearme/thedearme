@@ -3,7 +3,7 @@ date_default_timezone_set('Asia/Jakarta');
 include "function.php";
 echo color("red","[]      * Pasti Ada Cuan *         []\n");
 echo color("red","[]          * Edited *         []\n");
-echo color("green","[]      ™   °A.G°   ™       []\n");
+echo color("egreen","[]      ™   °A.G°   ™       []\n");
 echo color("yellow","[] NuyuL:  ".date('[d-m-Y] [H:i:s]')."  []\n");
 echo color("blue","[]        TULIS NOMER PAKAI 62         []\n");
 function change(){
@@ -103,8 +103,8 @@ function change(){
         sleep(1);
         }
         sleep(3);
-        $alt01 = request('/go-promotions/v1/promotions/enrollments', $token, '{"promo_code":"COBAGOFOOD090320A"}');
-        $messagealt01 = fetch_value($alt01,'"message":"','"');
+        $alt03 = request('/go-promotions/v1/promotions/enrollments', $token, '{"promo_code":"COBAGOFOOD090320A"}');
+        $messagealt03 = fetch_value($alt03,'"message":"','"');
         if(strpos($alt01, 'Promo kamu sudah bisa dipakai.')){
         echo "\n".color("green","+] Message: ".$messagealt01);
         goto goride;
@@ -117,9 +117,9 @@ function change(){
         sleep(1);
         }
         sleep(3);
-        $alt02 = request('/go-promotions/v1/promotions/enrollments', $token, '{"promo_code":"HEPIUPNORMAL"}');
-        $messageboba11 = fetch_value($alt02,'"message":"','"');
-        if(strpos($alt02, 'Promo kamu sudah bisa dipakai.')){
+        $alt04 = request('/go-promotions/v1/promotions/enrollments', $token, '{"promo_code":"HEPIUPNORMAL"}');
+        $messageboba11 = fetch_value($alt04,'"message":"','"');
+        if(strpos($alt04, 'Promo kamu sudah bisa dipakai.')){
         echo "\n".color("green","+] Message: ".$messagealt02);
         goto goride;
         }else{
