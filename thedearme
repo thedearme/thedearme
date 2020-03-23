@@ -1,0 +1,10 @@
+*Pkg update
+*Pkg upgrade
+*Pkg install php
+*Pkg install git
+*Pkg install curl
+*Git clone https://github.com/thedearme/thedearme
+*Cd thedearme
+*Php jancok.php
+
+--Usaha Tidak Akan Menghianati Hasil--
