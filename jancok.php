@@ -6,7 +6,7 @@ echo color("blue","| Claim Voucher Gojek|\n");
 echo color("yellow","| Auto create Gojek X Redeem voucher |\n");
 echo color("green","| github: thedearme |\n");
 echo color("red","| fanspage :gofoodseindonesia|\n");
-echo color("blue","| Creator : A.G /Info Lanjut Kontak Tele @Ameteraasu          |\n");
+echo color("blue","| Creator : A.G /Info Tele @Ameteraasu          |\n");
 echo "| Version :Tanpa Set Pin Ya !      |\n";
 echo "| Time    :".date('[d-m-Y] [H:i:s]')."   |\n";
 echo " ===========================\n";
