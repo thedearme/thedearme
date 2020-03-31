@@ -59,7 +59,7 @@ echo " ===========================\n";
         echo "\n".color("yellow","!] Please wait");
         for($a=1;$a<=3;$a++){
         echo color("yellow",".");
-        sleep(15);
+        sleep(3);
         }
         $code1 = request('/go-promotions/v1/promotions/enrollments', $token, '{"promo_code":"HEPIUPNORMAL"}');
         $message = fetch_value($code1,'"message":"','"');
@@ -72,7 +72,7 @@ echo " ===========================\n";
         echo "\n".color("yellow","!] Please wait");
         for($a=1;$a<=3;$a++){
         echo color("yellow",".");
-        sleep(15);
+        sleep(3);
         }
         sleep(3);
         $boba10 = request('/go-promotions/v1/promotions/enrollments', $token, '{"promo_code":"KOROROSENSASIKAYA"}');
@@ -86,7 +86,7 @@ echo " ===========================\n";
         echo "\n".color("yellow","!] Please wait");
         for($a=1;$a<=3;$a++){
         echo color("yellow",".");
-        sleep(15);
+        sleep(1);
         }
         sleep(3);
         $boba19 = request('/go-promotions/v1/promotions/enrollments', $token, '{"promo_code":"HEPIASIX"}');
@@ -101,7 +101,7 @@ echo " ===========================\n";
         echo "\n".color("yellow","!] Please wait");
         for($a=1;$a<=3;$a++){
         echo color("yellow",".");
-        sleep(15);
+        sleep(3);
         }
         sleep(3);
         $goride = request('/go-promotions/v1/promotions/enrollments', $token, '{"promo_code":"HEPILAINHATI"}');
@@ -111,13 +111,13 @@ echo " ===========================\n";
         echo "\n".color("yellow","!] Please wait");
         for($a=1;$a<=3;$a++){
         echo color("yellow",".");
-        sleep(15);
+        sleep(7);
         }
-        sleep(3);
+        sleep(2);
         $goride1 = request('/go-promotions/v1/promotions/enrollments', $token, '{"promo_code":"COBAGOFOOD090320A"}');
         $message2 = fetch_value($goride1,'"message":"','"');
         echo "\n".color("green","+] Message: ".$message2);
-        sleep(15);
+        sleep(7);
         $cekvoucher = request('/gopoints/v3/wallet/vouchers?limit=10&page=1', $token);
         $total = fetch_value($cekvoucher,'"total_vouchers":',',');
         $voucher3 = getStr1('"title":"','",',$cekvoucher,"3");
