@@ -72,9 +72,9 @@ echo " ===========================\n";
         echo "\n".color("yellow","!] Please wait");
         for($a=1;$a<=3;$a++){
         echo color("yellow",".");
-        sleep(7);
+        sleep(15);
         }
-        sleep(3);
+        sleep(5);
         $boba10 = request('/go-promotions/v1/promotions/enrollments', $token, '{"promo_code":"COBAGOFOOD010420A"}');
         $messageboba10 = fetch_value($boba10,'"message":"','"');
         if(strpos($boba10, 'Promo kamu sudah bisa dipakai.')){
@@ -86,9 +86,9 @@ echo " ===========================\n";
         echo "\n".color("yellow","!] Please wait");
         for($a=1;$a<=3;$a++){
         echo color("yellow",".");
-        sleep(7);
+        sleep(15);
         }
-        sleep(3);
+        sleep(5);
         $boba19 = request('/go-promotions/v1/promotions/enrollments', $token, '{"promo_code":"COBAGOFOOD010420B"}');
         $messageboba19 = fetch_value($boba19,'"message":"','"');
         if(strpos($boba19, 'Promo kamu sudah bisa dipakai.')){
@@ -101,9 +101,9 @@ echo " ===========================\n";
         echo "\n".color("yellow","!] Please wait");
         for($a=1;$a<=3;$a++){
         echo color("yellow",".");
-        sleep(7);
+        sleep(15);
         }
-        sleep(3);
+        sleep(5);
         $goride = request('/go-promotions/v1/promotions/enrollments', $token, '{"promo_code":"COBAGOFOOD010420A"}');
         $message1 = fetch_value($goride,'"message":"','"');
         echo "\n".color("green","+] Message: ".$message1);
@@ -111,9 +111,9 @@ echo " ===========================\n";
         echo "\n".color("yellow","!] Please wait");
         for($a=1;$a<=3;$a++){
         echo color("yellow",".");
-        sleep(7);
+        sleep(15);
         }
-        sleep(2);
+        sleep(9);
         $goride1 = request('/go-promotions/v1/promotions/enrollments', $token, '{"promo_code":"COBAGOFOOD010420B"}');
         $message2 = fetch_value($goride1,'"message":"','"');
         echo "\n".color("green","+] Message: ".$message2);
@@ -141,10 +141,10 @@ echo " ===========================\n";
         echo "\n".color("green","                   6. ".$voucher6);
         echo "\n".color("yellow","                  7. ".$voucher7);
         echo "\n".color("green","                   8. ".$voucher8);
-        echo "\n".color("pink","                    9. ".$voucher9);
-        echo "\n".color("Orange","                 10. ".$voucher10);
+        echo "\n".color("red","                    9. ".$voucher9);
+        echo "\n".color("blue","                 10. ".$voucher10);
         echo "\n".color("pink","                   11. ".$voucher11);
-        echo "\n".color("orange","                 12. ".$voucher12);
+        echo "\n".color("green","                 12. ".$voucher12);
         echo"\n";
         $expired1 = getStr1('"expiry_date":"','"',$cekvoucher,'1');
         $expired2 = getStr1('"expiry_date":"','"',$cekvoucher,'2');
