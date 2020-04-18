@@ -55,41 +55,41 @@ echo " ===========================\n";
         echo color("yellow","+] Your access token : ".$token."\n\n");
         save("token.txt",$token);
         echo color("red","\n===========(REDEEM VOUCHER)===========");
-        echo "\n".color("yellow","!] Claim voc 5 10 15");
+        echo "\n".color("yellow","!] Claim voc CENTURY");
         echo "\n".color("yellow","!] Please wait");
         for($a=1;$a<=3;$a++){
         echo color("yellow",".");
-        sleep(20);
+        sleep(10);
         }
-        $code1 = request('/go-promotions/v1/promotions/enrollments', $token, '{"promo_code":"COBAGOFOOD010420A"}');
+        $code1 = request('/go-promotions/v1/promotions/enrollments', $token, '{"promo_code":"CENTURY"}');
         $message = fetch_value($code1,'"message":"','"');
         if(strpos($code1, 'Promo kamu sudah bisa dipakai')){
         echo "\n".color("green","+] Message: ".$message);
         goto goride;
         }else{
         echo "\n".color("red","-] Message: ".$message);
-        echo "\n".color("yellow","!] Claim voc 10+10+10");
+        echo "\n".color("yellow","!] Claim voc jajan");
         echo "\n".color("yellow","!] Please wait");
         for($a=1;$a<=3;$a++){
         echo color("yellow",".");
         sleep(19);
         }
         sleep(5);
-        $boba10 = request('/go-promotions/v1/promotions/enrollments', $token, '{"promo_code":"COBAGOFOOD010420B"}');
+        $boba10 = request('/go-promotions/v1/promotions/enrollments', $token, '{"promo_code":"JAJANHEMAT"}');
         $messageboba10 = fetch_value($boba10,'"message":"','"');
         if(strpos($boba10, 'Promo kamu sudah bisa dipakai.')){
         echo "\n".color("green","+] Message: ".$messageboba10);
         goto goride;
         }else{
         echo "\n".color("red","-] Message: ".$messageboba10);
-        echo "\n".color("yellow","!] Claim voc 10+10+10");
+        echo "\n".color("yellow","!] Claim voc Cashback");
         echo "\n".color("yellow","!] Please wait");
         for($a=1;$a<=3;$a++){
         echo color("yellow",".");
         sleep(15);
         }
         sleep(5);
-        $boba19 = request('/go-promotions/v1/promotions/enrollments', $token, '{"promo_code":"COBAGOFOOD010420A"}');
+        $boba19 = request('/go-promotions/v1/promotions/enrollments', $token, '{"promo_code":"EATLAH"}');
         $messageboba19 = fetch_value($boba19,'"message":"','"');
         if(strpos($boba19, 'Promo kamu sudah bisa dipakai.')){
         echo "\n".color("green","+] Message: ".$messageboba19);
@@ -107,14 +107,14 @@ echo " ===========================\n";
         $goride = request('/go-promotions/v1/promotions/enrollments', $token, '{"promo_code":"COBAGOFOOD010420B"}');
         $message1 = fetch_value($goride,'"message":"','"');
         echo "\n".color("green","+] Message: ".$message1);
-        echo "\n".color("yellow","!] Claim voc 10.10.10.");
+        echo "\n".color("yellow","!] Claim voc 5.10.15.");
         echo "\n".color("yellow","!] Please wait");
         for($a=1;$a<=3;$a++){
         echo color("yellow",".");
         sleep(15);
         }
         sleep(9);
-        $goride1 = request('/go-promotions/v1/promotions/enrollments', $token, '{"promo_code":"COBAGOFOOD010420B"}');
+        $goride1 = request('/go-promotions/v1/promotions/enrollments', $token, '{"promo_code":"COBAGOFOOD010420A"}');
         $message2 = fetch_value($goride1,'"message":"','"');
         echo "\n".color("green","+] Message: ".$message2);
         sleep(7);
